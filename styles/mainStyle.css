@@ -1,0 +1,110 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+    font-size: x-large;
+}
+
+
+/*nav style*/
+div.nav{
+    background-color: rgb(178, 250, 250);
+    }
+
+div.nav > div.langauges{
+    background-color: rgb(241, 218, 2);
+    height: fit-content;
+    width: fit-content;
+}
+div.nav > div.langauges > p{
+    float: left;
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    font-size: large;
+    height: fit-content;
+    cursor: pointer;
+}
+div.nav > div.langauges > p.sel{
+    background-color: rgb(241, 165, 2);
+}
+div.nav > div.langauges::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+div.nav > .navUl{
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+}
+div.nav > .navUl > p{
+    margin: 0;
+    padding: 5px;
+    display: inline-block;
+    width: fit-content;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+    font-size: xx-large;
+}
+/*nav container*/
+div.container{
+    background-color: rgb(219, 255, 152);
+}
+
+.container > .page{
+    background-color: brown;
+    display: none;
+}
+.container > .show{
+    background-color: brown;
+    display: block;
+}
+/* title */
+.container > .page{
+    background-color: brown;
+    display: inline-block;
+    width: 100%;
+}.container > .page > .title{
+    width: fit-content;
+    background-color: rgb(51, 255, 85);
+    margin-top: 20em;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.container > .page > .title::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+.container > .page > .title > img{
+width: 150px;
+height: auto;
+}
+.container > .page > .title > .right {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.container > .page > .title > .right > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.container > .page > .title > .right::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.container > .page > .title > .right > span{
+    float: right;
+}
