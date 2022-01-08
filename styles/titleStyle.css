@@ -1,0 +1,79 @@
+
+/* title */
+.container > .page{
+    display: none;
+    width: 100%;
+}
+.container > .show{
+    display: inline-block;
+    height: 100%;
+}
+.container > .page > .title{
+    width: fit-content;
+    background-color: black;
+    margin-top: 50vh;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: auto auto;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
+    border: 2px inset #1C6EA4;
+    opacity: 0.9;
+}
+.container > .page > .OnTop{
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    width: fit-content;
+    background-color: black;
+    transform: translate(0%,0%);
+    display: grid;
+    grid-template-columns: auto auto;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
+    border: 2px inset #1C6EA4;
+    opacity: 0.9;
+    margin: 0;
+}
+.container > .page > .title::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+.container > .page > .title > img{
+width: 150px;
+height: auto;
+-webkit-border-radius: 14px 0px 0px 14px;
+border-radius: 14px 0px 0px 14px;
+opacity: 1;
+}
+.container > .page > .title > .right {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    color: white;
+    margin-left: 5px;
+}
+.container > .page > .title > .right > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.container > .page > .title > .right::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.container > .page > .title > .right > div >  span{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-shadow: 1px 2px 2px #fd3b00;
+}
+.container > .page > .title > .right > div >  span.title{
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 2px 2px #002efd;
+    font-weight: bold;
+}
+.container > .page > .title > .right > div > span.name > b{
+    color: rgb(0, 204, 255);
+}

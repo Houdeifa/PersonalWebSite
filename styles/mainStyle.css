@@ -1,35 +1,58 @@
 body{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    height: 100vh;
+    height: 98vh;
     font-size: x-large;
+    background-image: url("../imgs/bg/elec_card2.jpg");
+    background-size: cover;
+}
+html{
+    height: 100vh;
 }
 
 
 /*nav style*/
-div.nav{
-    background-color: rgb(178, 250, 250);
+div.navwrapper{
+    position: relative;
     }
+div.navwrapper > .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+        background-image: url("../imgs/bg/peter-gargiulo-cGNCepznaV8-unsplash.jpg");
+        background-size: cover;
+        opacity: 95%;
+}
+div.navwrapper > .nav{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+
+}
 
 div.nav > div.langauges{
-    background-color: rgb(241, 218, 2);
+    background-color: black;
     height: fit-content;
     width: fit-content;
+    color: white;
 }
 div.nav > div.langauges > p{
     float: left;
     list-style: none;
     padding: 2px;
     margin: 0;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 5px;
     margin-right: 5px;
     font-size: large;
     height: fit-content;
     cursor: pointer;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 div.nav > div.langauges > p.sel{
-    background-color: rgb(241, 165, 2);
+    background-color: white;
+    color: black;
 }
 div.nav > div.langauges::after{
     display: table;
@@ -37,11 +60,13 @@ div.nav > div.langauges::after{
     clear: both;
 }
 div.nav > .navUl{
-    margin-top: 10em;
+    margin-top: 50vh;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
 }
 div.nav > .navUl > p{
+    color: white;
     margin: 0;
     padding: 5px;
     display: inline-block;
@@ -52,59 +77,29 @@ div.nav > .navUl > p{
     text-align: center;
     cursor: pointer;
     font-size: xx-large;
+    font-family: Verdana, Geneva, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+div.nav > .navUl > p.sel{
+    color: rgb(0, 0, 0);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+div.nav > .navUl > p > span{
+    width: 130%;
+    height: 100%;
+    top:0px;
+    transform: translateX(-25%);
+    position: absolute;
+    display: inline-block;
+    background: linear-gradient(to right, rgba(0, 0, 0,0) 0%, rgba(255,255,255,1) 50%, rgba(0, 0, 0,0) 100%);
+    z-index: -1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 /*nav container*/
 div.container{
-    background-color: rgb(219, 255, 152);
-}
-
-.container > .page{
-    background-color: brown;
-    display: none;
-}
-.container > .show{
-    background-color: brown;
-    display: block;
-}
-/* title */
-.container > .page{
-    background-color: brown;
-    display: inline-block;
-    width: 100%;
-}.container > .page > .title{
-    width: fit-content;
-    background-color: rgb(51, 255, 85);
-    margin-top: 20em;
-    margin-left: 50%;
-    transform: translate(-50%,-50%);
-    display: grid;
-    grid-template-columns: auto auto;
-}
-.container > .page > .title::after{
-    display: table;
-    content: '';
-    clear: both;
-}
-.container > .page > .title > img{
-width: 150px;
-height: auto;
-}
-.container > .page > .title > .right {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-.container > .page > .title > .right > div{
-    display: flex;
-    flex-direction: column;
-}
-
-.container > .page > .title > .right::after{
-    display: table;
-    content: '';
-    clear: both;
-}
-
-.container > .page > .title > .right > span{
-    float: right;
+    overflow: hidden scroll;
+    height: 100%;
 }

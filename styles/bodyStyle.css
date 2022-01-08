@@ -1,0 +1,58 @@
+
+.container > .page > .body{
+    color: white;
+    margin-left: 10px;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.70);
+}
+.container > .page > [class="body show"]{
+    display: flex;
+}
+.container > .page > .body h2{
+    font-family: Verdana, Geneva, sans-serif;
+    
+}
+.container > .page > .body .Section{
+    display: flex;
+    flex-direction: column;
+    text-shadow: 1px 2px 2px #d9bd17;
+}
+
+.container > .page > .body .Section{
+    display: flex;
+    flex-direction: column;
+}
+
+.container > .page .Section-content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 10px;
+}
+.Section-content-core-study > span{
+    display: inline;
+}
+.Section-content-core-study > h3{
+    display: inline;
+}
+.Section-content-core-study > .competences-study{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Section-content-core-study > .competences-study > div{
+    flex-basis:30%;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+.Section-content > .interest ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.Section-content > .interest ul > li{
+    flex-basis:50%;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
