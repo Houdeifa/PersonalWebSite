@@ -64,16 +64,17 @@ div.nav > .navUl{
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    margin-left: 50%;
 }
 div.nav > .navUl > p{
+    margin-left: 50%;
+    transform: translateX(-50%);
     color: white;
     margin: 0;
     padding: 5px;
     display: inline-block;
     width: fit-content;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 30%;
     text-align: center;
     cursor: pointer;
     font-size: xx-large;
@@ -90,7 +91,7 @@ div.nav > .navUl > p > span{
     width: 130%;
     height: 100%;
     top:0px;
-    transform: translateX(-25%);
+    transform: translateX(-15%);
     position: absolute;
     display: inline-block;
     background: linear-gradient(to right, rgba(0, 0, 0,0) 0%, rgba(255,255,255,1) 50%, rgba(0, 0, 0,0) 100%);

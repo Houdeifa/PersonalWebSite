@@ -78,8 +78,38 @@ function ProjetsClick(){
 function ContactClick(){
     ClickFuntion("Contact");
 }
+function WriteLangueCookie(langue){
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            if(this.responseText == 0)
+                throw 'The cookie is not written !';
+        }
+      };
+      xmlhttp.open("GET", "pages/cookiesWrite.php?langue="+langue, true);
+      xmlhttp.send();
+}
+function languageClock(ln){
+    if(ln != 'FR' && ln != 'EN')
+        return;
+    WriteLangueCookie(ln);
+}
+function frClick(){
+    languageClock('FR');
+    setTimeout(function(){
+        window.location.reload();
+    },500)
+}
+function enClick(){
+    languageClock('EN');
+    setTimeout(function(){
+        window.location.reload();
+    },500)
+}
 window.onload = function(){
     var elements = document.getElementsByClassName("p-navUL");
+    var lnElements =  document.getElementsByClassName("langauges")[0].children;
     for (let i = 0; i < elements.length; i++) {
         if(elements[i].innerHTML.includes("Home")){
             elements[i].addEventListener("click", HomeClick, false);
@@ -99,5 +129,16 @@ window.onload = function(){
         }
       }
       elements[0].parentNode.addEventListener("mouseleave", lostHover, false);
+
+
+      for(let i = 0;i<lnElements.length;i++){
+        if(lnElements[i].innerHTML.includes('FR')){
+            lnElements[i].addEventListener("click", frClick, false);
+        }
+        else if(lnElements[i].innerHTML.includes('EN')){
+            lnElements[i].addEventListener("click", enClick, false);
+        }
+
+      }
       
 };
