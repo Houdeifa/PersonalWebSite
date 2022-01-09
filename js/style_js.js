@@ -107,23 +107,80 @@ function enClick(){
         window.location.reload();
     },500)
 }
+function showMessage(className){
+    var elements = document.getElementsByClassName("js-form-submission");
+    for(let i = 0;i<elements.length;i++){
+        if(elements[i].classList.contains(className)){
+            elements[i].classList.add("show");
+            setTimeout(function(e){
+                e.classList.remove("show");
+            },1000,elements[i])
+        }
+        else
+        elements[i].classList.remove("show");
+    }
+}
+function validateMyForm(){
+    var xmlhttp = new XMLHttpRequest();
+    var elements = document.getElementsByClassName("field-input");
+    var name = '', email ='',message='';
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            if(this.responseText == 0){
+                showMessage("error");
+                throw 'The message couldn\'t be written !';
+            }else if(this.responseText == 1){
+                showMessage("success");
+            }
+        }
+      };
+      for(let i = 0;i<elements.length;i++){
+        if(elements[i].id == "name")
+            name = elements[i].value;
+        else if(elements[i].id == "email")
+            email = elements[i].value;
+        else if(elements[i].id == "message")
+            message = elements[i].value;
+      }
+      console.log(name);
+      if(name == '' || email == '' || message == '')
+        return;
+      xmlhttp.open("GET", "pages/messageWrite.php?name="+name+"&email="+email+"&message="+message, true);
+      xmlhttp.send();
+      showMessage("waiting");
+      //success
+      //error
+      //waiting
+}
+function requiredMessage(type){
+    var elements = document.getElementsByClassName("field-msg");
+    for(let i = 0;i<elements.length;i++){
+        if(elements[i].getAttribute("data_error") == type){
+            elements[i].classList.add("show");
+            setTimeout(function(e){
+                e.classList.remove("show");
+            },1000,elements[i])
+        }
+    }
+
+}
 window.onload = function(){
     var elements = document.getElementsByClassName("p-navUL");
     var lnElements =  document.getElementsByClassName("langauges")[0].children;
     for (let i = 0; i < elements.length; i++) {
-        if(elements[i].innerHTML.includes("Home")){
+        if(elements[i].id == "Home"){
             elements[i].addEventListener("click", HomeClick, false);
             elements[i].addEventListener("mouseover", HomeHover, false);
         }
-        else if(elements[i].innerHTML.includes("CV")){
+        else if(elements[i].id == "CV"){
             elements[i].addEventListener("click", CVClick, false);
             elements[i].addEventListener("mouseover", CVHover, false);
         }
-        else if(elements[i].innerHTML.includes("Projets")){
+        else if(elements[i].id == "Projets"){
             elements[i].addEventListener("click", ProjetsClick, false);
             elements[i].addEventListener("mouseover", ProjetsHover, false);
         }
-        else if(elements[i].innerHTML.includes("Contact")){
+        else if(elements[i].id == "Contact"){
             elements[i].addEventListener("click", ContactClick, false);
             elements[i].addEventListener("mouseover", ContactHover, false);
         }

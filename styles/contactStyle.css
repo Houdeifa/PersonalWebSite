@@ -1,0 +1,102 @@
+.contact-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: x-large;
+    color: white;
+    width: 100%;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+.contact-container .contact-infos{
+    display: flex;
+    flex-direction: column;
+}
+.contact-container .contact-infos span{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+}
+.contact-container .contact-infos img{
+    width: 1em;
+    height: 1em;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.contact-container .contact-infos a{
+    display: flex;
+    text-decoration: none;
+    color: blue;
+    font-weight: 600;
+}
+.contact-container .contact-infos a:hover{
+    color: red;
+}
+.contact-container .contact-infos a span{
+    display: inline;
+    margin-left: 0;
+    transform: none;
+}
+
+.contact-container .contact-form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-container .contact-form span{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+.contact-container .contact-form form{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.field-container{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    align-content: center;
+}
+.field-container input{
+    width: 17rem;
+    height: 1.5rem;
+}
+.field-container textarea{
+    width: 17rem;
+    height: 10rem;
+}
+.field-container small{
+    position: absolute;
+    width: fit-content;
+    left: 0;
+    top:0;
+    margin-top: 2rem;
+    display: none;
+}.field-container small.show{
+    display: block;
+}
+.field-container textarea + small {
+    margin-top: 10.5rem;
+}
+
+.field-container .error{
+    color: red;
+    text-shadow: 1px 2px 2px #ffffff;
+}
+.field-container .success{
+    color: green;
+    text-shadow: 1px 2px 2px #ffffff;
+}
+
+.field-container button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 7em;
+    height: 2em;
+}
