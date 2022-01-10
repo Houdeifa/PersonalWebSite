@@ -1,4 +1,4 @@
-<div class="page">
+
     <div class="contact-container">
         <div class="contact-infos">
             <span> <?php echo $cotact_info['email_span'];?></span>
@@ -36,4 +36,3 @@
             </form>
         </div>
     </div>
-</div>

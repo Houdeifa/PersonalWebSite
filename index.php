@@ -111,6 +111,7 @@ $form_messages = ($_SESSION['langue'] == 'FR') ? $form_messages_fr : $form_messa
         <link rel="stylesheet" type="text/css" href="styles/titleStyle.css" />
         <link rel="stylesheet" type="text/css" href="styles/bodyStyle.css" />
         <link rel="stylesheet" type="text/css" href="styles/contactStyle.css" />
+        <link rel="stylesheet" type="text/css" href="styles/mobilestyle.css" />
     </head>
 <body>
     <div class="navwrapper">
@@ -121,10 +122,10 @@ $form_messages = ($_SESSION['langue'] == 'FR') ? $form_messages_fr : $form_messa
                 <p <?php echo  $_SESSION['langue'] == 'EN' ? 'class="sel"':'';?>>EN</p>
             </div>
             <div class="navUl">
-                <p class="p-navUL sel active" id="Home"><span></span><?php echo $home_text;?></p>
-                <p class="p-navUL" id="CV"><?php echo $CV_text;?></p>
-                <!--<p class="p-navUL" id="Projets"><?php echo $Projets_text;?></p> !-->
-                <p class="p-navUL" id="Contact"><?php echo $Contact_text;?></p>
+                <p class="p-navUL sel active" id="Home"><img src="imgs/icons/Home.png"><span></span><?php echo $home_text;?></p>
+                <p class="p-navUL" id="CV"><img src="imgs/icons/CV.png"><?php echo $CV_text;?></p>
+                <!--<p class="p-navUL" id="Projets"><img src=""><?php echo $Projets_text;?></p> !-->
+                <p class="p-navUL" id="Contact"><img src="imgs/icons/Contact.png"><?php echo $Contact_text;?></p>
             </div>
         </div>
     </div>

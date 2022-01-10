@@ -82,6 +82,9 @@ div.nav > .navUl > p{
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+div.nav > .navUl > p > img{ 
+    display: none;
+}
 div.nav > .navUl > p.sel{
     color: rgb(0, 0, 0);
     -webkit-transition: all 0.5s ease;

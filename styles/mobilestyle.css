@@ -1,0 +1,63 @@
+@media (orientation:portrait) {
+    div.nav > div.langauges > p{
+        font-size: 3rem;
+    }
+    div.nav > .navUl{
+        margin-top: 40vh;
+        transform: translateY(-50%);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 3vh;
+        width: fit-content;
+        margin-left: 50%;
+    }
+    div.nav > .navUl > p > span{
+        display: none;
+    }
+    div.nav > .navUl > p{
+        -webkit-transition: none;
+        transition: none;
+    }
+    div.nav > .navUl > p > img{ 
+        display: block;
+        width: 20vw;
+        width: 10vh;
+    }
+    
+    div.nav > .navUl > p.sel{
+        color: white;
+        -webkit-transition: none;
+        transition: none;
+    }
+    .contact-container
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr;
+        font-size: 2rem;
+        grid-row-gap: 2vh;
+    }
+    .contact-container .contact-infos img{
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .field-container input{
+        width: 30rem;
+        height: 3rem;
+    }
+    .field-container textarea{
+        width: 30rem;
+        height: 20rem;
+    }
+    .field-container button{
+        width: 14rem;
+        height: 4rem;
+        font-size: 3rem;
+    }
+    .container > .page > .title{
+        font-size: 3rem;
+    }
+    .container > .page > .title > img{
+        width: 13vh;
+    }
+}
