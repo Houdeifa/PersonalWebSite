@@ -167,6 +167,7 @@ function requiredMessage(type){
 window.onload = function(){
     var elements = document.getElementsByClassName("p-navUL");
     var lnElements =  document.getElementsByClassName("langauges")[0].children;
+    
     for (let i = 0; i < elements.length; i++) {
         if(elements[i].id == "Home"){
             elements[i].addEventListener("click", HomeClick, false);
